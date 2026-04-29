@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LevelObject identifier="sulphurite"
+             name="Sulphurite"
+             description="A crusty, yellow mineral that reeks of rotten eggs. Rich in elemental sulphur, it emits a faint acrid gas."
+             category="Mineral"
+             tags="mineral,sulphur"
+             scale="1.0"
+             canbefiredamaged="false"
+             canbefrozen="true">
+
+  <!-- Main sprite: bright yellow crystalline formation -->
+  <Sprite texture="Sprites/Sulphurite.png"
+          depth="0.5"
+          origin="0.5,0.5"
+          offset="0,0" />
+
+  <!-- Physics: static mineable block -->
+  <Physics shape="rectangle"
+           width="32"
+           height="32"
+           bodytype="static"
+           collisiontype="solid" />
+
+  <!-- Destructible: requires a plasma cutter or pickaxe, drops sulphur -->
+  <Destructible health="30"
+                requiredtool="plasmacutter,pickaxe"
+                minitemdropcount="2"
+                maxitemdropcount="4"
+                itemidentifier="sulphur" />
+
+  <!-- Acrid gas aura: invisible particles that apply burn on contact -->
+  <ParticleEmitter angle="0"
+                   emissiontype="looping"
+                   particlespersecond="2"
+                   particlespeed="20"
+                   particlespeedrandomfactor="0.5"
+                   particlerotation="0"
+                   particleangularvelocity="0"
+                   particleangularvelocityrandomfactor="0"
+                   spritedeepth="0.9"
+                   emitradius="10"
+                   startdelay="0">
+    <Particle texture=""
+              size="30"
+              alive="1.5"
+              collides="true"
+              collisiontype="character"
+              destroywhencolliding="false">
+      <StatusEffect type="OnImpact" target="Character" delay="0">
+        <Affliction identifier="burn" strength="0.5" />
+      </StatusEffect>
+    </Particle>
+  </ParticleEmitter>
+
+  <!-- Sound effect when mined -->
+  <Sound file="Content/Sounds/mining_crystal.ogg" type="OnDamaged" />
+
+  <!-- Spawn locations: hydrothermal vent walls and floors -->
+  <BiomeSpawns>
+    <BiomeSpawn biome="hydrothermalvents"
+                spawntype="wall"
+                minspawns="1"
+                maxspawns="3"
+                spawnprobability="0.25" />
+    <BiomeSpawn biome="hydrothermalvents"
+                spawntype="floor"
+                minspawns="1"
+                maxspawns="2"
+                spawnprobability="0.15" />
+  </BiomeSpawns>
+</LevelObject>
