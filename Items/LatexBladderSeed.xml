@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Item identifier="latexbladderseed"
+      name="Latex Bladder Seed"
+      category="Seed"
+      description="A seed that grows into a Latex Bladder – a renewable source of natural latex."
+      maxstacksize="8"
+      allowdropping="true"
+      hideinmenus="false"
+      cargocontaineridentifier="planter"
+      cargocontainervisible="true">
+
+  <Sprite texture="Sprites/LatexBladderSeed.png"
+          depth="0.6"
+          sourcerect="0,0,32,32" />
+
+  <Plantable plantidentifier="latexbladder"
+             minwater="1"
+             maxwater="10"
+             growthtime="150.0"
+             consumefertilizer="false" />
+</Item>
