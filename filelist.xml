@@ -8,7 +8,6 @@
   <!-- Materials & items -->
   <Item file="%ModDir%/Items/Latex.xml" />
   <Item file="%ModDir%/Items/Sulphur.xml" />
-  <Item file="%ModDir%/Items/Rubber.xml" />
 
   <!-- Recipes -->
   <Item file="%ModDir%/CraftingRecipes/RubberFromLatex.xml" />
