@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LevelObject identifier="latexbladder"
              name="Latex Bladder"
-             description="A bioluminescent bulbous organism filled with a milky, elastic latex. Vital for pressure-resistant rubber."
+             description="A bioluminescent bulbous organism filled with a milky, elastic latex."
              category="Plant"
-             tags="harvestable,plant,latex"
+             tags="harvestable,plant"
              scale="1.0"
              canbefiredamaged="true"
              canbefrozen="true">
 
-  <!-- Wall-bound sprite -->
   <Sprite texture="Sprites/LatexBladder.png"
           depth="0.5"
           origin="0.5,0.0"
           offset="0,0" />
 
-  <!-- Physics: static, only on walls -->
   <Physics shape="rectangle"
            width="32"
            height="32"
            bodytype="static"
            collisiontype="solid" />
 
-  <!-- Harvestable component: yields Latex when cut with a knife or plasma cutter -->
-  <Harvestable identifier="latex"
+  <!-- Harvest now drops the new item "latexbulb" -->
+  <Harvestable identifier="latexbulb"
                minamount="1"
-               maxamount="3"
+               maxamount="2"
                requiredtool="cutting"
                showremovedelay="15" />
 
-  <!-- Destructible (optional): destroyed if hit enough times, can drop extra latex -->
+  <!-- Optional: destroyed plant also drops the blob -->
   <Destructible health="20"
                 minitemdropcount="1"
-                maxitemdropcount="2"
-                itemidentifier="latex" />
+                maxitemdropcount="1"
+                itemidentifier="latexbulb" />
 
-  <!-- Growable: used when planted in a planter; stages: 0 (sprout) and 1 (mature) -->
   <Growable minsize="0.1"
             maxsize="1.0"
             growthspeed="0.02"
@@ -44,11 +41,9 @@
             spritesheetrows="1"
             spritesheetcolumns="2" />
 
-  <!-- Alternate stage sprites for harvest state -->
   <SpriteState state="harvested"
                texture="Sprites/LatexBladder_harvested.png" />
 
-  <!-- Biome spawning: hydrothermal vents and abyss caves -->
   <BiomeSpawns>
     <BiomeSpawn biome="hydrothermalvents"
                 spawntype="wall"
@@ -62,6 +57,5 @@
                 spawnprobability="0.2" />
   </BiomeSpawns>
 
-  <!-- Sound effects for harvesting -->
   <Sound file="Content/Sounds/harvest_plant.ogg" type="OnHarvest" />
 </LevelObject>
