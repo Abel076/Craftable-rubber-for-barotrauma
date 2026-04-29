@@ -1,23 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
 <contentpackage name="craftable-rubber" modversion="1.0.0" gameversion="1.8.6.2" corepackage="false">
-  <!-- Existing -->
+  <!-- Entities -->
   <Item file="%ModDir%/Items/LatexBladder.xml" />
   <Item file="%ModDir%/Items/Sulphurite.xml" />
+  <Item file="%ModDir%/Items/LatexBladderSeed.xml" />
+
+  <!-- Materials & items -->
   <Item file="%ModDir%/Items/Latex.xml" />
   <Item file="%ModDir%/Items/Sulphur.xml" />
   <Item file="%ModDir%/Items/Rubber.xml" />
+
+  <!-- Recipes -->
   <Item file="%ModDir%/CraftingRecipes/RubberFromLatex.xml" />
+  <Item file="%ModDir%/CraftingRecipes/LatexBladderSeed.xml" />   <!-- optional -->
+
+  <!-- Sprites -->
   <Item file="%ModDir%/Sprites/LatexBladder.png" />
   <Item file="%ModDir%/Sprites/LatexBladder_harvested.png" />
   <Item file="%ModDir%/Sprites/Sulphurite.png" />
   <Item file="%ModDir%/Sprites/Latex_item.png" />
   <Item file="%ModDir%/Sprites/Sulphur_item.png" />
-
-  <!-- seed and growth sprites -->
-  <Item file="%ModDir%/Items/LatexBladderSeed.xml" />
   <Item file="%ModDir%/Sprites/LatexBladderSeed.png" />
-  <Item file="%ModDir%/Sprites/LatexBladder_stage1.png" />
-  <Item file="%ModDir%/Sprites/LatexBladder_stage2.png" />
-
-  <!-- recipe to create seeds from latex -->
-  <Item file="%ModDir%/CraftingRecipes/LatexBladderSeed.xml" />
-</contentpackage>
+  <Item file="%ModDir%/Sprites/LatexBladder_growth.png" />        <!-- if using spritesheet -->
+</contentpackage>p
