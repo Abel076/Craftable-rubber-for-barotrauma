@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Recipe>
+  <RequiredFabricator>researchstation</RequiredFabricator>
+  <RequiredItems>
+    <Item name="LatexBulb" mincount="1" />
+    <Item name="Stabilozine" mincount="1" />
+  </RequiredItems>
+  <ResultItem name="LatexBladderSeed" amount="2" />
+</Recipe> 
