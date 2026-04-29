@@ -1,24 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="craftable-rubber" modversion="1.0.0" gameversion="1.8.6.2" corepackage="false">
-  <!-- Entities -->
-  <Item file="%ModDir%/Items/LatexBladder.xml" />
-  <Item file="%ModDir%/Items/Sulphurite.xml" />
-  <Item file="%ModDir%/Items/LatexBladderSeed.xml" />
+<contentpackage name="craftable-rubber" modversion="1.0.0" gameversion="1.4.6.0" corepackage="false">
 
-  <!-- Materials & items -->
+  <!-- ===== PLANTS & MINERALS (Level Objects) ===== -->
+  <Item file="%ModDir%/Items/LatexBladder.xml" />
+  <Item file="%ModDir%/Items/Sulphurite.xml" />        
+
+  <!-- ===== RESOURCES & MATERIALS ===== -->
+  <Item file="%ModDir%/Items/LatexBulb.xml" />
   <Item file="%ModDir%/Items/Latex.xml" />
+  <Item file="%ModDir%/Items/SulphuriteItem.xml" />    
   <Item file="%ModDir%/Items/Sulphur.xml" />
 
-  <!-- Recipes -->
-  <Item file="%ModDir%/CraftingRecipes/RubberFromLatex.xml" />
-  <Item file="%ModDir%/CraftingRecipes/LatexBladderSeed.xml" />   <!-- optional -->
+  <!-- ===== SEED ===== -->
+  <Item file="%ModDir%/Items/LatexBladderSeed.xml" />
 
-  <!-- Sprites -->
+  <!-- ===== CRAFTING RECIPES ===== -->
+  <Item file="%ModDir%/CraftingRecipes/RubberFromLatex.xml" />
+  <Item file="%ModDir%/CraftingRecipes/LatexBladderSeedRecipe.xml" />
+
+  <!-- ===== SPRITES ===== -->
+  <!-- Plant & mineral -->
   <Item file="%ModDir%/Sprites/LatexBladder.png" />
   <Item file="%ModDir%/Sprites/LatexBladder_harvested.png" />
-  <Item file="%ModDir%/Sprites/Sulphurite.png" />
+  <Item file="%ModDir%/Sprites/LatexBladder_growth.png" />
+  <Item file="%ModDir%/Sprites/Sulphurite.png" />          
+  <Item file="%ModDir%/Sprites/SulphuriteItem.png" />      
+
+  <!-- Item icons -->
+  <Item file="%ModDir%/Sprites/LatexBulb.png" />
   <Item file="%ModDir%/Sprites/Latex_item.png" />
   <Item file="%ModDir%/Sprites/Sulphur_item.png" />
   <Item file="%ModDir%/Sprites/LatexBladderSeed.png" />
-  <Item file="%ModDir%/Sprites/LatexBladder_growth.png" />        <!-- if using spritesheet -->
-</contentpackage>p
+
+</contentpackage>
