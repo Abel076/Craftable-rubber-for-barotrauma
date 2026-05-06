@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Items>
-      <Item name="Latex Blob" identifier="latexblob" category="Material" tags="smallitem,organic,harvestable,rubber" cargocontaineridentifier=""
-        showcontentsintooltip="false" Scale="0.8" fireproof="false" description="A squishy, milky blob of natural latex. Can be refined into latex."
-        impactsoundtag="footstep_organic" RequireAimToUse="False">
+      <Item name="Latex Blob"
+            identifier="latexblob"
+            category="Material"
+            tags="smallitem,organic,harvestable,rubber"
+            cargocontaineridentifier=""
+            showcontentsintooltip="false"
+            Scale="0.8" fireproof="false"
+            description="A squishy, milky blob of natural latex. Can be refined into latex."
+            impactsoundtag="footstep_organic"
+            RequireAimToUse="False">
         
         <!-- Deconstruct into base material -->
         <Deconstruct time="5">
