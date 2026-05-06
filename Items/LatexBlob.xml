@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+      <Item name="Latex Blob" identifier="latexblob" category="Material" tags="smallitem,organic,harvestable,rubber" cargocontaineridentifier=""
+        showcontentsintooltip="false" Scale="0.8" fireproof="false" description="A squishy, milky blob of natural latex. Can be refined into latex."
+        impactsoundtag="footstep_organic" RequireAimToUse="False">
+        
+        <!-- Deconstruct into base material -->
+        <Deconstruct time="5">
+            <Item identifier="latex" amount="1" />
+        </Deconstruct>     
+            
+          <InventoryIcon texture="%ModDir%/Textures/latexblob.png" sourcerect="0,0,32,32" origin="0.5,0.5" />
+        <Sprite texture="%ModDir%/Textures/latexblob.png" sourcerect="0,0,32,32" origin="0.5,0.5" depth="0.6" />
+        
+        <!-- How the blob appears when stored inside a compatible container -->
+        <ContainedSprite name="Latex Blob In Container" allowedcontainertags="crate,storage,smallitemcontainer"
+            texture="%ModDir%/Textures/latexblob.png" sourcerect="0,0,24,24" depth="0.55" origin="0,0" />
+        
+        <!-- Physical properties -->
+        <Body width="30" height="30" density="8" />
+       </Item>
+</Items>
